@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-smoke-800 text-white font-body antialiased;
+    zoom: 115%;
+    /*
+      background-image: 
+      radial-gradient(circle at 20% 50%, rgba(236, 109, 22, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(22, 197, 94, 0.03) 0%, transparent 50%);
+    */
+  }
+  
+  * {
+    @apply scroll-smooth;
+  }
+}
+
+/* Smooth scroll snap */
+html {
+  scroll-behavior: smooth;
+}
+
+@supports (scroll-snap-type: y mandatory) {
+  .snap-container {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+  }
+  
+  .snap-start {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@layer components {
+  .specimen-card {
+    @apply bg-smoke-600 rounded-lg overflow-hidden shadow-sm hover:shadow-xl 
+           transition-all duration-300 cursor-pointer
+           border border-smoke-900;
+  }
+  
+  .specimen-card-image {
+    @apply w-full aspect-square object-cover group-hover:scale-105 
+           transition-transform duration-500;
+  }
+  
+  .filter-button {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-all duration-200
+           border border-stone-300 bg-white text-stone-950
+           hover:bg-stone-100 hover:border-stone-400
+           focus:outline-none focus:ring-2 focus:ring-pyrite-500 focus:ring-offset-2;
+  }
+  
+  .filter-button-active {
+    @apply bg-smoke-500 text-white border-smoke-600 hover:bg-smoke-600;
+  }
+  
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-50 
+           flex items-center justify-center p-4
+           animate-fade-in;
+  }
+  
+  .modal-content {
+    @apply bg-neutral-900 rounded-xl max-w-7xl w-full max-h-[90vh] 
+           overflow-y-auto shadow-2xl
+           animate-scale-in;
+  }
+  
+  .search-input {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-smoke-300 
+           bg-smoke-400 text-stone-200 placeholder-stone-400
+           focus:border-pyrite-500 focus:ring-2 focus:ring-pyrite-200
+           transition-all duration-200 outline-none;
+  }
+  
+  .badge {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-medium
+           bg-granite-800 text-granite-300 border border-granite-300;
+  }
+  
+  .badge-mineral {
+    @apply bg-granite-800 text-granite-300 border-granite-300;
+  }
+  
+  .badge-color {
+    @apply bg-stone-800 text-stone-200 border-stone-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-stone-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-500;
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #1f1d20 4%,
+    #28242c 25%,
+    #1f1d20 36%
+  );
+  background-size: 1000px 100%;
+}
+
+[data-rmiz-modal-overlay] {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
