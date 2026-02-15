@@ -5,6 +5,9 @@ import SpecimenModal from './components/SpecimenModal';
 import FilterPanel from './components/FilterPanel';
 import LoadingSkeleton from './components/LoadingSkeleton';
 
+// API URL - uses environment variable or falls back to relative path for local dev
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 function App() {
   const [specimens, setSpecimens] = useState([]);
   const [categories, setCategories] = useState({});
@@ -37,7 +40,7 @@ function App() {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('/api/categories');
+      const response = await axios.get(`${API_BASE_URL}/categories`);
       setCategories(response.data.data);
     } catch (err) {
       console.error('Error fetching categories:', err);
@@ -59,7 +62,7 @@ function App() {
         ...(filters.fluorescence && { fluorescence: filters.fluorescence })
       });
 
-      const response = await axios.get(`/api/specimens?${params}`);
+      const response = await axios.get(`${API_BASE_URL}/specimens?${params}`);
       setSpecimens(response.data.data);
       setPagination(prev => ({
         ...prev,
