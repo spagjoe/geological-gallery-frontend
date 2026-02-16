@@ -4,7 +4,6 @@ import SpecimenCard from './components/SpecimenCard';
 import SpecimenModal from './components/SpecimenModal';
 import FilterPanel from './components/FilterPanel';
 import LoadingSkeleton from './components/LoadingSkeleton';
-import { Analytics } from "@vercel/analytics/react"
 
 // API URL - uses environment variable or falls back to relative path for local dev
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
@@ -110,7 +109,6 @@ function App() {
 
       <main className="container mx-auto max-w-7xl px-4 pb-12 lg:-my-16">
         {/* Hero Section */}
-          <Analytics />
           <section className="relative min-h-screen flex items-center overflow-hidden pb-8 lg:pb-0 snap-start snap-always">
             {/* Background gradient base */}
             <div className="absolute inset-0 bg-gradient-to-r from-smoke-800 via-smoke-500 to-smoke-800"></div>
