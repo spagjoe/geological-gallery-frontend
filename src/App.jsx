@@ -105,7 +105,10 @@ function App() {
 
   return (
     <div className="min-h-screen scroll-smooth">
-      
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
+    <link rel="manifest" href="/site.webmanifest"></link>
 
       <main className="container mx-auto max-w-7xl px-4 pb-12 lg:-my-16">
         {/* Hero Section */}
