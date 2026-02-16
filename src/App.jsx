@@ -4,7 +4,7 @@ import SpecimenCard from './components/SpecimenCard';
 import SpecimenModal from './components/SpecimenModal';
 import FilterPanel from './components/FilterPanel';
 import LoadingSkeleton from './components/LoadingSkeleton';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 // API URL - uses environment variable or falls back to relative path for local dev
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
