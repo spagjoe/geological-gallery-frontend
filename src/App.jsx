@@ -256,8 +256,8 @@ function App() {
             <button
               onClick={() => handlePageChange(pagination.page - 1)}
               disabled={pagination.page === 1}
-              className="px-4 py-2 rounded-md border border-stone-300 bg-white text-stone-700 
-                         hover:bg-stone-100 disabled:opacity-50 disabled:cursor-not-allowed 
+              className="px-4 py-2 rounded-md border border-smoke-700 bg-smoke-400 text-stone-300 
+                         hover:bg-smoke-300 disabled:opacity-50 disabled:cursor-not-allowed 
                          transition-all duration-200 font-medium"
             >
               Previous
@@ -286,8 +286,8 @@ function App() {
                     onClick={() => handlePageChange(pageNum)}
                     className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                       pagination.page === pageNum
-                        ? 'bg-earth-500 text-white border border-earth-600'
-                        : 'border border-stone-300 bg-white text-stone-700 hover:bg-stone-100'
+                        ? 'bg-smoke-400 text-stone-300 border border-pyrite-600'
+                        : 'border border-smoke-700 bg-smoke-400 text-stone-300 hover:bg-stone-100'
                     }`}
                   >
                     {pageNum}
@@ -299,8 +299,8 @@ function App() {
             <button
               onClick={() => handlePageChange(pagination.page + 1)}
               disabled={pagination.page === pagination.totalPages}
-              className="px-4 py-2 rounded-md border border-stone-300 bg-white text-stone-700 
-                         hover:bg-stone-100 disabled:opacity-50 disabled:cursor-not-allowed 
+              className="px-4 py-2 rounded-md border border-smoke-700 bg-smoke-400 text-stone-300 
+                         hover:bg-smoke-300 disabled:opacity-50 disabled:cursor-not-allowed 
                          transition-all duration-200 font-medium"
             >
               Next
