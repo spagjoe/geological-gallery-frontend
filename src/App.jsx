@@ -318,7 +318,7 @@ function App() {
       )}
 
       {/* Footer */}
-      <footer className="bg-stone-900 text-stone-300 py-8 px-4 mt-16">
+      <footer className="bg-smoke-900 text-stone-300 py-8 px-4 mt-16">
         <div className="container mx-auto max-w-7xl text-center">
           <p className="text-sm">
             mycool.rocks © {new Date().getFullYear()}
