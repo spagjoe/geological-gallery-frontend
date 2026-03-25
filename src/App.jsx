@@ -273,10 +273,10 @@ function App() {
                   Math.abs(pageNum - pagination.page) <= 1;
                 
                 if (!showPage && pageNum === 2) {
-                  return <span key={idx} className="px-2 text-stone-400">...</span>;
+                  return <span key={idx} className="px-2 text-stone-300">...</span>;
                 }
                 if (!showPage && pageNum === pagination.totalPages - 1) {
-                  return <span key={idx} className="px-2 text-stone-400">...</span>;
+                  return <span key={idx} className="px-2 text-stone-300">...</span>;
                 }
                 if (!showPage) return null;
 
@@ -287,7 +287,7 @@ function App() {
                     className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                       pagination.page === pageNum
                         ? 'bg-smoke-400 text-stone-300 border border-pyrite-600'
-                        : 'border border-smoke-700 bg-smoke-400 text-stone-300 hover:bg-stone-100'
+                        : 'border border-smoke-700 bg-smoke-400 text-stone-300 hover:bg-smoke-300'
                     }`}
                   >
                     {pageNum}
