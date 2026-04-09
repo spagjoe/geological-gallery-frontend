@@ -191,7 +191,7 @@ const SpecimenModal = ({ specimen, onClose }) => {
                     day: 'numeric' 
                   })}
                 </p>
-                <p className="text-sm text-stone-500 font-roboto-mono">
+                <p className="pt-6 text-xs text-stone-600 font-roboto-mono">
                   To view in full detail, click the image to open in a new tab.
                 </p>
               </div>
