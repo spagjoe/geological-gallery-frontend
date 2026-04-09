@@ -163,19 +163,6 @@ const SpecimenModal = ({ specimen, onClose }) => {
               </div>
             )}
 
-            {specimen.colors && specimen.colors.length > 0 && (
-              <div>
-                <h3 className="font-roboto-mono text-lg font-semibold text-stone-300 mb-2">Colors</h3>
-                <div className="flex flex-wrap gap-2">
-                  {specimen.colors.map((color, idx) => (
-                    <span key={idx} className="badge badge-color">
-                      {color}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {specimen.fluorescence && specimen.fluorescence.length > 0 && specimen.fluorescence[0] != null &&(
               <div>
                 <h3 className="font-roboto-mono text-lg font-semibold text-stone-300 mb-2 flex items-center gap-2">
@@ -203,6 +190,9 @@ const SpecimenModal = ({ specimen, onClose }) => {
                     month: 'long', 
                     day: 'numeric' 
                   })}
+                </p>
+                <p className="text-sm text-stone-500 font-roboto-mono">
+                  To view in full detail, click the image to open in a new tab.
                 </p>
               </div>
             )}
