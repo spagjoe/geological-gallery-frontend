@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const navBase = `px-4 py-2 rounded-lg font-roboto-mono text-sm transition-all duration-200`;
+  const navBase = `px-3 py-2 rounded-lg font-roboto-mono text-sm transition-all duration-200`;
   const active = `bg-smoke-500/50 border border-smoke-300 text-white`;
   const inactive = `text-stone-400 hover:text-white`;
 
