@@ -7,16 +7,12 @@
 @layer base {
   body {
     @apply bg-smoke-800 text-white font-body antialiased;
-    zoom: 115%;
-    /*
-      background-image: 
-      radial-gradient(circle at 20% 50%, rgba(236, 109, 22, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(22, 197, 94, 0.03) 0%, transparent 50%);
-    */
   }
-  
-  * {
-    @apply scroll-smooth;
+
+  @media (min-width: 768px) {
+    body {
+      zoom: 115%;
+    }
   }
 }
 
