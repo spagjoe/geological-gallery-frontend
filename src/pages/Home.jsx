@@ -1,6 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const FEATURED_IMAGES = [
+  "https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/calcite_willemite_crust_SWMW_kr.jpg",
+  "https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/franklin_cubeSW.jpg",
+  "https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/franklinitepyriteSW.jpg",
+  "https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/rutilated_quartzKR.jpg",
+  "https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/botryoidal_with_willemiteKR.jpg"
+];
+
+const randomImage = FEATURED_IMAGES[Math.floor(Math.random() * FEATURED_IMAGES.length)];
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -44,7 +54,7 @@ const Home = () => {
           <div className="relative lg:h-[750px]">
             <div className="relative h-full rounded-2xl overflow-hidden">
               <img
-                src="https://spaghettijoe-rock-bucket.s3.us-east-2.amazonaws.com/calcite_willemite_crust_SWMW_kr.jpg"
+                src={randomImage}
                 alt="Featured geological specimen"
                 className="w-full h-full object-cover"
               />
