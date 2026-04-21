@@ -9,10 +9,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-smoke-900/90 backdrop-blur-sm border-b border-smoke-700 py-3">
       <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
-        <NavLink to="/" className="font-roboto-mono text-white font-bold text-lg tracking-tight">
+        <NavLink to="/" className="font-roboto-mono text-white font-bold text-md lg:text-lg tracking-tight">
           mycool.rocks
         </NavLink>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <NavLink to="/" end className={({ isActive }) => `${navBase} ${isActive ? active : inactive}`}>
             Home
           </NavLink>
